@@ -1,0 +1,13 @@
+## application-cus1.yml
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://peer1:1111/eureka/
+      ##  如果是向一个注册中心的集群注册，
+      ##  那我们只需要向其中的任意一台注册中心注册即可，
+      ##  该注册中心会把请求转发集群内的其他注册中心（服务同步） http://peer2:1112/eureka/,http://peer3:1113/eureka/
+server:
+  port: 3111
+spring:
+  application:
+    name: service-ribbon
