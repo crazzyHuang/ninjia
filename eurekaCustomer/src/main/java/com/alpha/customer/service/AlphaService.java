@@ -24,6 +24,7 @@ public class AlphaService {
     }
 
     public String hiService2(String name){
+
         ResponseEntity<String> responseEntity = restTemplate.getForEntity("http://SERVICE-HI/hi?name={1}",String.class,name);
         String body = responseEntity.getBody();
         return body;
